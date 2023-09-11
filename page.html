@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <title>first full-stack app</title>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/@babel/standalone@7.22.10/babel.min.js"></script>
+      <style>
+        body {
+          margin: 0 0;
+          background-color: skyblue;
+          color: salmon;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        
+        }
+
+        h1 {
+          text-align: center;
+          font-size: 3rem;
+        }
+
+        li {
+          padding: 10px 0;
+          font-size: 1.8rem;
+        }
+        
+      </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    
+    <div id="myApp"></div>
+    
+      <script type="text/babel">
+        
+        "use strict";
+        function ProjectList(props) {
+          console.log(props);
+          return (
+            <div>
+              <ol>
+                {
+                  props.list.map(
+                    
+                    (item, index) => (
+                      <li key={index}>
+                       {item.random}
+                    
+                      </li>
+                    )
+                    
+                  )
+                }
+              </ol>
+            </div>
+          );
+        }
+        
+        $.getJSON(
+          "x",
+          function (jsonFromJquery) {
+            
+            const myRoot = ReactDOM.createRoot( document.getElementById("myApp") );
+            myRoot.render(
+              <ProjectList list={jsonFromJquery} />
+            );
+            
+          }
+        );
+      console.log("hello world");
+      </script>
+    
+
+
+
+    
+  </body>
+</html>
