@@ -1,11 +1,10 @@
-<h1>Node.js and React basics</h1>
+Basic Node.js and React app
+========================
 
-<h3>Server-Side Web Development at Santa Rosa Junior College</h3>
-<p>
-In this assignment I used Javascript code to create a web
- server application that returns HTML and JSON in response
- to a an HTTP request.  </p>
+### For CS55.13 Server-Side Web Development at Santa Rosa Junior College
 
-<p></p>
 
+In this assignment I used **Javascript** to create a simple web
+ server application that returns **HTML** and **JSON** in response
+ to a an **HTTP** request.
 
